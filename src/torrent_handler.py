@@ -8,6 +8,7 @@ Created on Jan 26, 2013
 """
 
 import os
+import errno
 import shutil
 import subprocess
 import logging
@@ -19,7 +20,7 @@ import config
 
 logging.basicConfig(filename=config.LOGFILE, filemode='ab', level=logging.DEBUG)
 
-VIDEO_EXTENSIONS = ['.mkv', '.avi', '.mov']
+VIDEO_EXTENSIONS = ['.mkv', '.avi', '.mov', 'mp4']
 MUSIC_EXTENSIONS = ['.flac', '.mp3', '.ogg', '.wav']
 SOFTWARE_EXTENSIONS = ['.iso', '.exe']
 ARCHIVE_EXTENSIONS = ['.rar', '.zip', '.7z']
@@ -71,9 +72,9 @@ def _extract(archive_path, destination):
     :param  destination:
     :type destination: str
     """
-    extract_job = subprocess.Popen([config.EXECUTABLE,           # 7Zip Executable
-                                    'e',                         # extract to current working dir
-                                    '-y',                        # assume yes to all (overwrite)
+    extract_job = subprocess.Popen([config.EXECUTABLE,  # 7Zip Executable
+                                    'e',  # extract to current working dir
+                                    '-y',  # assume yes to all (overwrite)
                                     archive_path],
                                    cwd=destination)              # Change current working directory
     # Since 7Zip only works with e flag..
@@ -81,11 +82,30 @@ def _extract(archive_path, destination):
     extract_job.wait()
 
 
+def _create_extraction_path(directory_path):
+    """
+    Verifies that current path exists - if not, creates the path.
+
+    :param directory_path:
+    :type directory_path: str, unicode
+    """
+    if not os.path.exists(directory_path):
+        try:
+            os.makedirs(directory_path)
+            logging.info("Creating directory" % directory_path)
+
+        except OSError as e:
+            if e.errno != errno.EEXIST:
+                logging.exception("Failed to create directory %s" % directory_path, e)
+                raise
+            pass
+
+
 def extract_all(folder):
     """
     recursively extracts all archives in folder.
     recursive extraction is iterative and is saved under
-    
+
     /foler/config.EXTRACTION_TEMP_DIR_NAME/unpacked_%iteration number
 
     :param folder:
@@ -128,22 +148,24 @@ def _handle_directory(directory, handler, torrent_name):
     for directory_path, subdirectories, filenames in os.walk(directory):
         logging.info("Processing Directory %s" % directory_path)
         for filename in filenames:
-            category_path = get_categorized_path(filename)
-            if category_path is not None:
-                try:
-                    destination_dir = os.path.join(category_path, torrent_name)
-                    logging.info('Found file %s in %s' % (filename, directory_path))
-                    if not os.path.exists(destination_dir):
-                        logging.info('Creating directory %s' % destination_dir)
-                        os.mkdir(destination_dir)
+            category_path, file_category = get_categorized_path(filename)
 
-                    handler(os.path.join(directory_path, filename), os.path.join(destination_dir, filename))
-                    #Move\Copy all relevant files to their location (keep original files for uploading)
-                    logging.info('%s %s to %s' % (handler.__name__,
-                                                  os.path.join(directory, filename),
-                                                  os.path.join(destination_dir, filename)))
+            if category_path is not None:
+
+                original_path = os.path.join(directory_path, filename)
+                logging.info("Found %s file %s" % (file_category, original_path))
+
+                destination_dir = os.path.join(category_path, torrent_name)
+                _create_extraction_path(destination_dir)  # Creates target directory (of category path)
+                destination_path = os.path.join(destination_dir, filename)
+
+                try:
+                    # Move\Copy all relevant files to their location (keep original files for uploading)
+                    handler(original_path, destination_path)
+                    logging.info('%s %s to %s' % (handler.__name__, original_path, destination_path))
+
                 except OSError as e:
-                    logging.exception("Failed to move %s : %s" % (os.path.join(directory_path, filename), e))
+                    logging.exception("Failed to %s %s : %s" % (handler.__name__, original_path, e))
 
 
 def _choose_handler(folder, torrent_name):
@@ -200,6 +222,7 @@ def _get_content_type(filename):
     "filename.ext"
     """
     base_filename = os.path.basename(filename)
+    base_filename.lower()
     extension = os.path.splitext(base_filename)[1]
     if extension in VIDEO_EXTENSIONS:
         if base_filename.find('sample') != -1:
@@ -221,11 +244,15 @@ def get_categorized_path(filename):
     returns destination path for extractions according to the category to which the file belongs
     :param filename:
     "filename.ext"
+    :rtype : tuple or None
     """
     try:
-        # noinspection PyTypeChecker
-        return config.CATEGORY_PATH[_get_content_type(filename)]
+        return config.CATEGORY_PATH[_get_content_type(filename)], _get_content_type(filename)
+
+    # If file is not recognized by any of the categories/checks - there would be no entry at the
+    # config file
     except KeyError:
+        logging.debug("%s is not in any relevant category, ignoring" % filename)
         return None
 
 
