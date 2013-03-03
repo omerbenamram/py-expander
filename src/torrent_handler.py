@@ -92,7 +92,7 @@ def _create_extraction_path(directory_path):
     if not os.path.exists(directory_path):
         try:
             os.makedirs(directory_path)
-            logging.info("Creating directory" % directory_path)
+            logging.info("Creating directory %s" % directory_path)
 
         except OSError as e:
             if e.errno != errno.EEXIST:
