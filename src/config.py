@@ -7,12 +7,12 @@ Created on Jan 27, 2013
 import os
 import sys
 
-CATEGORY_PATH = {'tv': '/volume1/Downloads/dst/processed/tv',
-                 'movie': '/volume1/Downloads/dst/processed/Movies',
-                 'app': '/volume1/Downloads/dst/processed/Apps',
-                 'music': '/volume1/Downloads/dst/processed/Music'}
+CATEGORY_PATH = {'tv': '/path/to/tv/directory',
+                 'movie': '/path/to/movies/directory',
+                 'app': '/path/to/apps/directory',
+                 'music': '/path/to/music/directory'}
 
-LOGFILE = '/volume1/Downloads/Unrar/unrar.log'
+LOGFILE = '/path/to/log.log'
 
 EXTRACTION_TEMP_DIR_NAME = '_extracted'
 
