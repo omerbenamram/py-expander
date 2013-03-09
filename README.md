@@ -9,8 +9,7 @@ The script extracts files recursively (if extract is necessary..)
 and the moves the files to pre-configured folders based on their type!
 if no rars are present in the download - the script will copy the files.
 
-The script relies on standard torrent names (such as SxxExx TV shows numbering)
-so I reccomend downloading torrents from private trackers if possible!
+The script relies on scene torrent naming standards (such as SxxExx TV shows numbering)
 
 In any case - original torrent files are conserved for upload.
 
