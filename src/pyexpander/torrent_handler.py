@@ -30,4 +30,3 @@ def expand_torrent_from_transmission():
         logging.exception("Critical exception occurred: ")
         raise
 
-

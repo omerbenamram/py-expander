@@ -8,7 +8,7 @@ from pyexpander.log import get_logger
 logger = get_logger('categorize')
 
 
-VIDEO_EXTENSIONS = ['.mkv', '.avi', '.mov', 'mp4']
+VIDEO_EXTENSIONS = ['.mkv', '.avi', '.mov', '.mp4']
 MUSIC_EXTENSIONS = ['.flac', '.mp3', '.ogg', '.wav']
 SOFTWARE_EXTENSIONS = ['.iso', '.exe']
 
