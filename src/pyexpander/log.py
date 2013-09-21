@@ -1,11 +1,12 @@
-__author__ = 'ohadr'
-
-
 import logbook
 from logbook import Logger
 
+from pyexpander import config
 
-#TODO: log to file. logging.basicConfig(filename=config.LOGFILE, filemode='ab', level=logging.DEBUG)
+
+filehandler = logbook.RotatingFileHandler(config.LOGFILE, level=logbook.DEBUG)
+
+
 def get_logger(name):
     """
     Return the logger for the given name.
@@ -13,4 +14,6 @@ def get_logger(name):
     :param name: The name of the logger.
     :return: A logbook Logger.
     """
-    return Logger(name)
+    logger = Logger(name, level=logbook.DEBUG)
+    logger.handlers.append(filehandler)
+    return logger

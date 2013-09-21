@@ -8,7 +8,7 @@ APP_PATH = '/apps/directory'
 MUSIC_PATH = '/music/directory'
 
 
-LOGFILE = '/path/to/log.log'
+LOGFILE = '/var/log/pyexp.log'
 
 
 EXTRACTION_TEMP_DIR_NAME = '_extracted'

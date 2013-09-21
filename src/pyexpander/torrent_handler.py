@@ -43,5 +43,5 @@ def expand_torrent_main():
         else:
             expand_torrent_from_transmission()
     except:
-        logging.exception("Critical exception occurred: ")
+        logger.exception("Critical exception occurred: ")
         raise
