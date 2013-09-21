@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/__init__.py" afterPath="$PROJECT_DIR$/src/pyexpander/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/categorize.py" afterPath="$PROJECT_DIR$/src/pyexpander/categorize.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/config.py" afterPath="$PROJECT_DIR$/src/pyexpander/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/postprocess.py" afterPath="$PROJECT_DIR$/src/pyexpander/postprocess.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setup.py" afterPath="$PROJECT_DIR$/src/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/torrent_handler.py" afterPath="$PROJECT_DIR$/src/pyexpander/torrent_handler.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="py-expander.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379765192340" ignored="false" />
+    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379781342566" ignored="false" />
     <file path="/setup.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764816015" ignored="false" />
     <file path="/__init__.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764698907" ignored="false" />
     <file path="/transmission.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764985472" ignored="false" />
@@ -444,7 +438,11 @@
       <created>1379765192611</created>
       <updated>1379765192611</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added opton to run from command line">
+      <created>1379781346054</created>
+      <updated>1379781346054</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -533,7 +531,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Missing dot in constant" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added opton to run from command line" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -558,6 +556,7 @@
     <MESSAGE value="Separate categorization and folder handling" />
     <MESSAGE value="Added entry point to function" />
     <MESSAGE value="Missing dot in constant" />
+    <MESSAGE value="Added opton to run from command line" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
