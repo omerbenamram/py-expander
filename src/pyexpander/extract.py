@@ -23,17 +23,16 @@ def _extract(archive_path, destination):
     :param  destination:
     :type destination: str
     """
-    process_info = [config.EXECUTABLE,  # 7Zip Executable
-                                    'e',  # extract to current working dir
-                                    '-y',  # assume yes to all (overwrite)
-                                    archive_path],
+    # 'e': extract to current working dir
+    # '-y': assume yes to all (overwrite)
+    process_info = [config.EXECUTABLE, 'e', '-y', archive_path],
 
     logger.debug('Running %r' % process_info)
 
     # Change current working directory since 7Zip only works with e flag.
-    extract_job = subprocess.Popen(process_info, cwd=destination)
+    output = subprocess.check_output(process_info, cwd=destination)
 
-    extract_job.wait()
+    logger.debug('Output: %s' % output)
 
 
 def _find_target_archives(directory):
