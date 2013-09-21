@@ -1,21 +1,20 @@
-"""
-Created on Jan 27, 2013
+__author__ = 'ohadr'
 
-@author: Omer
-"""
 
 import os
 import sys
+
 
 CATEGORY_PATH = {'tv': '/path/to/tv/directory',
                  'movie': '/path/to/movies/directory',
                  'app': '/path/to/apps/directory',
                  'music': '/path/to/music/directory'}
 
+
 LOGFILE = '/path/to/log.log'
 
-EXTRACTION_TEMP_DIR_NAME = '_extracted'
 
+EXTRACTION_TEMP_DIR_NAME = '_extracted'
 
 
 def _find_executable(filename):
