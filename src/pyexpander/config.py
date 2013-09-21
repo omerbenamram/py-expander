@@ -17,13 +17,6 @@ LOGFILE = '/path/to/log.log'
 EXTRACTION_TEMP_DIR_NAME = '_extracted'
 
 
-def get_environmental_variables_from_transmission():
-    TARGET_TORRENT_DIR = os.getenv('TR_TORRENT_DIR')
-    TARGET_TORRENT_NAME = os.getenv('TR_TORRENT_NAME')
-    TARGET_TORRENT_DIR = os.path.realpath(os.path.join(TARGET_TORRENT_DIR, TARGET_TORRENT_NAME))
-
-    return TARGET_TORRENT_DIR, TARGET_TORRENT_NAME
-
 
 def _find_executable(filename):
     """
