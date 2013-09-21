@@ -1,6 +1,4 @@
-__author__ = 'ohadr'
-
-
+import shutil
 import os
 import re
 import subprocess
@@ -25,7 +23,7 @@ def _extract(archive_path, destination):
     """
     # 'e': extract to current working dir
     # '-y': assume yes to all (overwrite)
-    process_info = [config.EXECUTABLE, 'e', '-y', archive_path],
+    process_info = [config.EXECUTABLE, 'e', '-y', archive_path]
 
     logger.debug('Running %r' % process_info)
 
@@ -101,3 +99,22 @@ def extract_all(folder):
 
     else:
         logger.info("Found no archives in %s !" % current_dir)
+
+
+def cleanup_temp(folder):
+    """
+    This function searches for the subdirectory created for extraction and deletes it.
+
+    :param folder:
+    """
+    logger.info('Cleaning up...')
+
+    listdir = os.listdir(folder)
+
+    if config.EXTRACTION_TEMP_DIR_NAME in listdir:
+        try:
+            logger.info('Going to delete %s' % (os.path.join(folder, config.EXTRACTION_TEMP_DIR_NAME)))
+            shutil.rmtree(os.path.join(folder, config.EXTRACTION_TEMP_DIR_NAME))
+        except OSError:
+            logger.exception("Failed to delete directory %s ! " %
+                              (os.path.join(folder, config.EXTRACTION_TEMP_DIR_NAME)))

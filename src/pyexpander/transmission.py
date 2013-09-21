@@ -1,7 +1,8 @@
-__author__ = 'ohadr'
-
-
 import os
+from pyexpander.log import get_logger
+
+
+logger = get_logger('transmission')
 
 
 def get_environmental_variables_from_transmission():
@@ -14,5 +15,7 @@ def get_environmental_variables_from_transmission():
     torrent_name = os.getenv('TR_TORRENT_NAME')
     full_path = os.path.realpath(os.path.join(torrent_dir, torrent_name))
 
-    return full_path, torrent_name
+    logger.info('Called from transmission with torrent %s' % full_path)
+
+    return full_path
 

@@ -35,7 +35,7 @@ def _find_executable(filename):
         else:
             # The directory in the path does not exist
             pass
-    raise Exception(filename + 'not found or is not in system PATH')
+    raise Exception(filename + ' not found or is not in system PATH')
 
 
 EXECUTABLE = _find_executable('7z')  # Currently only 7z is supported.

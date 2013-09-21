@@ -1,18 +1,14 @@
 #!/usr/bin/python
-__author__ = 'omerba'
-
 import os
 import errno
 import shutil
-import subprocess
 import logging
 import re
-import itertools
 
+from pyexpander.extract import extract_all, cleanup_temp
 from pyexpander import config
+from pyexpander.transmission import get_environmental_variables_from_transmission
 
-
-logging.basicConfig(filename=config.LOGFILE, filemode='ab', level=logging.DEBUG)
 
 VIDEO_EXTENSIONS = ['.mkv', '.avi', '.mov', 'mp4']
 MUSIC_EXTENSIONS = ['.flac', '.mp3', '.ogg', '.wav']
@@ -20,7 +16,6 @@ SOFTWARE_EXTENSIONS = ['.iso', '.exe']
 
 
 TV_RE = re.compile("S\d{2}E\d{2}", re.IGNORECASE)
-
 
 
 def _create_extraction_path(directory_path):
@@ -77,13 +72,13 @@ def _handle_directory(directory, handler, torrent_name):
                     logging.exception("Failed to %s %s : %s" % (handler.__name__, original_path, e))
 
 
-def _choose_handler(folder, torrent_name):
+def _choose_handler(folder):
     """
     This function chooses between copying and moving rars (to conserve the original torrent files)
     :param folder:
     :type folder: str
     """
-
+    torrent_name = os.path.basename(folder)
     # If folder has extracted rars...
     listdir = os.listdir(folder)
     if config.EXTRACTION_TEMP_DIR_NAME in listdir:
@@ -92,25 +87,6 @@ def _choose_handler(folder, torrent_name):
     # If folder has content only
     else:
         _handle_directory(folder, shutil.copy, torrent_name)
-
-
-def _cleanup_temp(folder):
-    """
-    This function searches for the subdirectory created for extraction and deletes it.
-
-    :param folder:
-    """
-    logging.info('Cleaning up...')
-
-    listdir = os.listdir(folder)
-
-    if config.EXTRACTION_TEMP_DIR_NAME in listdir:
-        try:
-            logging.info('Going to delete %s' % (os.path.join(folder, config.EXTRACTION_TEMP_DIR_NAME)))
-            shutil.rmtree(os.path.join(folder, config.EXTRACTION_TEMP_DIR_NAME))
-        except OSError:
-            logging.exception("Failed to delete directory %s ! " %
-                              (os.path.join(folder, config.EXTRACTION_TEMP_DIR_NAME)))
 
 
 def _is_tv_show(filename):
@@ -162,26 +138,29 @@ def get_categorized_path(filename):
     # config file
     except KeyError:
         logging.debug("%s is not in any relevant category, ignoring" % filename)
-        return None
+        return None, None
+
+
+def expand_torrent(torrent_path):
+    logging.info('Processing torrent %s' % torrent_path)
+
+    extract_all(torrent_path)
+    _choose_handler(torrent_path)
+    cleanup_temp(torrent_path)
+
+    logging.info('Done')
 
 
 def main():
     """
     This main function is designed to be called by transmission.
-
     """
     try:
         logging.info('Initializing')
 
-        #Get environmental values from transmission
-        #Path should be $TR_TORRENT_DIR/$TR_TORRENT_NAME
+        torrent_path = get_environmental_variables_from_transmission()
 
-        TORRENT_DIR, TORRENT_NAME = config.get_environmental_variables_from_transmission()
-
-        extract_all(TORRENT_DIR)
-        _choose_handler(TORRENT_DIR, TORRENT_NAME)
-        _cleanup_temp(TORRENT_DIR)
-        logging.info('Done!')
+        expand_torrent(torrent_path)
     except:
         logging.exception("Critical exception occurred: ")
         raise
