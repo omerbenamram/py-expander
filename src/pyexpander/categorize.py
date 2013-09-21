@@ -1,5 +1,5 @@
 import os
-import re
+import guessit
 
 from pyexpander import config
 from pyexpander.log import get_logger
@@ -8,45 +8,36 @@ from pyexpander.log import get_logger
 logger = get_logger('categorize')
 
 
-VIDEO_EXTENSIONS = ['.mkv', '.avi', '.mov', '.mp4']
 MUSIC_EXTENSIONS = ['.flac', '.mp3', '.ogg', '.wav']
 SOFTWARE_EXTENSIONS = ['.iso', '.exe']
 
 
-TV_RE = re.compile("S\d{2}E\d{2}", re.IGNORECASE)
+def get_path_video(filename):
+    guess = guessit.guess_video_info(filename)
+
+    if guess[u'type'] == u'episode':
+        series = guess.get(u'series', u'').title()
+        season = guess.get(u'season', u'')
+
+        return config.TV_PATH.format(series=series, season=season)
+    elif guess[u'type'] == u'movie':
+        title = guess.get(u'title', u'').title()
+        year = guess.get(u'year', u'')
+
+        return config.MOVIE_PATH.format(title=title, year=year)
+    else:
+        return None
 
 
-def _is_tv_show(filename):
-    """
-    Takes filename "file.ext"
-    Returns True if file is TV Show based on S01E01 regex
-    """
-    if TV_RE.search(filename):
-        return True
-    return False
-
-
-def _get_content_type(filename):
-    """
-    returns 'tv', 'movie', 'music', 'app' for respective filetypes
-    :rtype : str
-    :param filename:
-    "filename.ext"
-    """
+def get_path_non_video(filename):
     base_filename = os.path.basename(filename)
     base_filename.lower()
     extension = os.path.splitext(base_filename)[1]
-    if extension in VIDEO_EXTENSIONS:
-        if base_filename.find('sample') != -1:
-            return "vid-sample"
-        if _is_tv_show(base_filename):
-            return 'tv'
-        else:
-            return 'movie'
+
     if extension in MUSIC_EXTENSIONS:
-        return 'music'
+        return config.MUSIC_PATH
     if extension in SOFTWARE_EXTENSIONS:
-        return 'app'
+        return config.APP_PATH
     else:
         return None
 
@@ -58,11 +49,12 @@ def get_categorized_path(filename):
     "filename.ext"
     :rtype : tuple or None
     """
-    try:
-        return config.CATEGORY_PATH[_get_content_type(filename)], _get_content_type(filename)
+    categorized_path = get_path_non_video(filename) or get_path_video(filename)
 
-    # If file is not recognized by any of the categories/checks - there would be no entry at the
-    # config file
-    except KeyError:
+    if categorized_path is not None:
+        logger.debug("Categorized path for %s is %s" % (filename, categorized_path))
+    else:
+        # file is not recognized by any of the categories/checks.
         logger.debug("%s is not in any relevant category, ignoring" % filename)
-        return None, None
+
+    return categorized_path

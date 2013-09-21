@@ -44,14 +44,14 @@ def _handle_directory(directory, handler, torrent_name):
     for directory_path, subdirectories, filenames in os.walk(directory):
         logger.info("Processing Directory %s" % directory_path)
         for filename in filenames:
-            category_path, file_category = get_categorized_path(filename)
+            category_path = get_categorized_path(filename)
 
             if category_path is not None:
 
                 original_path = os.path.join(directory_path, filename)
-                logger.info("Found %s file %s" % (file_category, original_path))
 
                 destination_dir = os.path.join(category_path, torrent_name)
+
                 # Creates target directory (of category path)
                 _create_extraction_path(destination_dir)
                 destination_path = os.path.join(destination_dir, filename)

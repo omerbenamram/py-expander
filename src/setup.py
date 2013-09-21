@@ -9,7 +9,7 @@ setup(
     install_requires = ['logbook', 'guessit'],
      entry_points={
           'console_scripts': [
-              'pyexpand = pyexpander:expand_torrent_from_transmission',
+              'pyexpand = pyexpander:expand_torrent_main',
           ]
      }
 )

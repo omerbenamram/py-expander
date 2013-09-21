@@ -1,14 +1,11 @@
-__author__ = 'ohadr'
-
-
 import os
 import sys
 
 
-CATEGORY_PATH = {'tv': '/path/to/tv/directory',
-                 'movie': '/path/to/movies/directory',
-                 'app': '/path/to/apps/directory',
-                 'music': '/path/to/music/directory'}
+TV_PATH = '/tv/directory'
+MOVIE_PATH = '/movies/directory'
+APP_PATH = '/apps/directory'
+MUSIC_PATH = '/music/directory'
 
 
 LOGFILE = '/path/to/log.log'
