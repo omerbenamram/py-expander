@@ -1,0 +1,3 @@
+[console_scripts]
+pyexpand = pyexpander:expand_torrent_main
+
