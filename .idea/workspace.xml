@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" name="Default" comment="" />
+    <list default="true" id="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/setup.py" />
+      <change type="DELETED" beforePath="D:\Documents\GitHub\py-expander\setup.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/__init__.py" afterPath="$PROJECT_DIR$/src/pyexpander/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/torrent_handler.py" afterPath="$PROJECT_DIR$/src/pyexpander/torrent_handler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/transmission.py" afterPath="$PROJECT_DIR$/src/pyexpander/transmission.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="py-expander.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379763468667" ignored="false" />
-    <file path="/setup.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379760611151" ignored="false" />
-    <file path="/__init__.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379763241068" ignored="false" />
-    <file path="/transmission.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379763181484" ignored="false" />
+    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764541067" ignored="false" />
+    <file path="/setup.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764816015" ignored="false" />
+    <file path="/__init__.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764698907" ignored="false" />
+    <file path="/transmission.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764985472" ignored="false" />
     <file path="/a.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379760272800" ignored="false" />
-    <file path="/torrent_handler.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379763354089" ignored="false" />
+    <file path="/torrent_handler.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764600706" ignored="false" />
     <file path="/log.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379761002142" ignored="false" />
     <file path="/extract.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379761960591" ignored="false" />
+    <file path="/postprocess.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764353553" ignored="false" />
+    <file path="/categorized.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764481619" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +54,7 @@
       <file leaf-file-name="transmission.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pyexpander/transmission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -53,12 +62,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="torrent_handler.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="torrent_handler.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pyexpander/torrent_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="7" selection-start="4926" selection-end="4926" vertical-scroll-proportion="0.5330836">
+            <state line="12" column="32" selection-start="379" selection-end="379" vertical-scroll-proportion="-8.16">
               <folding>
-                <element signature="e#18#27#0" expanded="true" />
+                <element signature="e#18#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postprocess.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="22" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="categorize.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pyexpander/categorize.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="18" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,10 +117,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
+      <file leaf-file-name="setup.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="46" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+            <state line="11" column="61" selection-start="337" selection-end="337" vertical-scroll-proportion="0.22639225">
               <folding />
             </state>
           </provider>
@@ -98,7 +129,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pyexpander/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
+            <state line="4" column="38" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,19 +154,23 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/src/pyexpander/log.py" />
         <option value="$PROJECT_DIR$/src/pyexpander/config.py" />
         <option value="$PROJECT_DIR$/src/pyexpander/extract.py" />
-        <option value="$PROJECT_DIR$/src/pyexpander/transmission.py" />
-        <option value="$PROJECT_DIR$/src/pyexpander/__init__.py" />
+        <option value="$PROJECT_DIR$/src/pyexpander/postprocess.py" />
+        <option value="$PROJECT_DIR$/src/pyexpander/categorized.py" />
+        <option value="$PROJECT_DIR$/src/pyexpander/categorize.py" />
         <option value="$PROJECT_DIR$/src/pyexpander/torrent_handler.py" />
+        <option value="$PROJECT_DIR$/src/pyexpander/__init__.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/src/setup.py" />
+        <option value="$PROJECT_DIR$/src/pyexpander/transmission.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="269" />
-    <option name="width" value="1411" />
+    <option name="x" value="10" />
+    <option name="width" value="1660" />
     <option name="height" value="1010" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -229,6 +264,20 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py-expander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py-expander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pyexpander" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -257,6 +306,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\GitHub\py-expander\src" />
       <recent name="D:\Documents\GitHub\py-expander\src\pyexpander" />
     </key>
   </component>
@@ -379,7 +429,11 @@
       <created>1379763470110</created>
       <updated>1379763470110</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Separate categorization and folder handling">
+      <created>1379764541652</created>
+      <updated>1379764541652</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -403,15 +457,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="269" y="0" width="1411" height="1010" extended-state="0" />
-    <editor active="true" />
+    <frame x="10" y="0" width="1660" height="1010" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2994811" sideWeight="0.6701878" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25281602" sideWeight="0.6701878" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -468,7 +522,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restore functionality from before refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separate categorization and folder handling" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -490,6 +544,7 @@
     <MESSAGE value="Moved constatns, chagned logging" />
     <MESSAGE value="Use check_call so 7zip fails are reported" />
     <MESSAGE value="Restore functionality from before refactoring" />
+    <MESSAGE value="Separate categorization and folder handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -497,10 +552,12 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup.py">
+    <entry file="file://$PROJECT_DIR$/src/pyexpander/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="46" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="9" column="30" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -513,11 +570,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pyexpander/config.py">
+    <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="30" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
+        <state line="9" column="22" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#23#32#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -531,28 +588,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pyexpander/transmission.py">
+    <entry file="file://$PROJECT_DIR$/src/pyexpander/categorize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
+        <state line="65" column="18" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pyexpander/__init__.py">
+    <entry file="file://$PROJECT_DIR$/src/pyexpander/transmission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="15" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pyexpander/torrent_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="7" selection-start="4926" selection-end="4926" vertical-scroll-proportion="0.5330836">
+        <state line="12" column="32" selection-start="379" selection-end="379" vertical-scroll-proportion="-8.16">
           <folding>
-            <element signature="e#18#27#0" expanded="true" />
+            <element signature="e#18#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pyexpander/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="38" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="61" selection-start="337" selection-end="337" vertical-scroll-proportion="0.22639225">
+          <folding />
         </state>
       </provider>
     </entry>

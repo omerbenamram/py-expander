@@ -16,7 +16,7 @@ def expand_torrent(torrent_path):
     logging.info('Done')
 
 
-def main():
+def expand_torrent_from_transmission():
     """
     This main function is designed to be called by transmission.
     """
@@ -29,9 +29,5 @@ def main():
     except:
         logging.exception("Critical exception occurred: ")
         raise
-
-
-if __name__ == "__main__":
-    main()
 
 
