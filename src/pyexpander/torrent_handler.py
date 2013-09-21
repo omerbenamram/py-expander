@@ -1,11 +1,5 @@
-#!/var/packages/python/target/bin/python
-
-"""
-Created on Jan 26, 2013
-
-@author: Omer
-
-"""
+#!/usr/bin/python
+__author__ = 'omerba'
 
 import os
 import errno
@@ -15,7 +9,7 @@ import logging
 import re
 import itertools
 
-from src.pyexpander import config
+from pyexpander import config
 
 
 logging.basicConfig(filename=config.LOGFILE, filemode='ab', level=logging.DEBUG)
