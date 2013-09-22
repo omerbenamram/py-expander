@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" name="Default" comment="" />
     <ignored path="py-expander.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379828894912" ignored="false" />
+    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835185736" ignored="false" />
     <file path="/setup.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832324924" ignored="false" />
     <file path="/__init__.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764698907" ignored="false" />
     <file path="/transmission.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764985472" ignored="false" />
@@ -18,6 +16,7 @@
     <file path="/categorized.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764481619" ignored="false" />
     <file path="/categorize.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379769465300" ignored="false" />
     <file path="/config.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832396314" ignored="false" />
+    <file path="/README.md" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835174023" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,7 @@
       <file leaf-file-name="config.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pyexpander/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+            <state line="10" column="25" selection-start="145" selection-end="174" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -66,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postprocess.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="postprocess.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="50" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.74703085">
+            <state line="64" column="50" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -77,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="16" column="36" selection-start="593" selection-end="593" vertical-scroll-proportion="0.32304037">
               <folding />
             </state>
           </provider>
@@ -162,6 +161,7 @@
         <option value="$PROJECT_DIR$/src/pyexpander/config.py" />
         <option value="$PROJECT_DIR$/src/setup.py" />
         <option value="$PROJECT_DIR$/src/pyexpander/postprocess.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -332,7 +332,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.intentionPowerPack" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/bin/git.exe" />
     <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -495,7 +495,11 @@
       <created>1379782299063</created>
       <updated>1379782299063</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Updated docs">
+      <created>1379835186083</created>
+      <updated>1379835186083</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -519,9 +523,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -536,7 +541,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -584,7 +588,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed pycs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated docs" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -612,6 +616,7 @@
     <MESSAGE value="Added opton to run from command line" />
     <MESSAGE value="Logging to file" />
     <MESSAGE value="Removed pycs" />
+    <MESSAGE value="Updated docs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -699,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="6" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
@@ -713,21 +711,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pyexpander/config.py">
+    <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+        <state line="64" column="50" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
+    <entry file="file://$PROJECT_DIR$/src/pyexpander/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="50" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.74703085">
+        <state line="10" column="25" selection-start="145" selection-end="174" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="36" selection-start="593" selection-end="593" vertical-scroll-proportion="0.32304037">
+          <folding />
         </state>
       </provider>
     </entry>
