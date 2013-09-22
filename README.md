@@ -26,6 +26,8 @@ Edit the configuration with your folders
 
 	$ vim config.py
 
+That's it.
+
 The script can be used from the command line:
 
 	$ pyexpand /download/The.Wire.S01E01.HDTV

@@ -7,7 +7,7 @@
     </list>
     <ignored path="py-expander.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835596556" ignored="false" />
+    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835651815" ignored="false" />
     <file path="/setup.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832324924" ignored="false" />
     <file path="/__init__.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764698907" ignored="false" />
     <file path="/transmission.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764985472" ignored="false" />
@@ -19,7 +19,7 @@
     <file path="/categorized.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764481619" ignored="false" />
     <file path="/categorize.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379769465300" ignored="false" />
     <file path="/config.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832396314" ignored="false" />
-    <file path="/README.md" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835551511" ignored="false" />
+    <file path="/README.md" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835694733" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="65" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.807601">
+            <state line="29" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.5855107">
               <folding />
             </state>
           </provider>
@@ -506,7 +506,11 @@
       <created>1379835596207</created>
       <updated>1379835596207</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fix text format">
+      <created>1379835652119</created>
+      <updated>1379835652119</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -595,7 +599,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added usage info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix text format" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -625,6 +629,7 @@
     <MESSAGE value="Removed pycs" />
     <MESSAGE value="Updated docs" />
     <MESSAGE value="Added usage info" />
+    <MESSAGE value="Fix text format" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -739,7 +744,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="65" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.807601">
+        <state line="29" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.5855107">
           <folding />
         </state>
       </provider>
