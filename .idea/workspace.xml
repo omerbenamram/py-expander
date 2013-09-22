@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" name="Default" comment="" />
+    <list default="true" id="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="py-expander.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835185736" ignored="false" />
+    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835596556" ignored="false" />
     <file path="/setup.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832324924" ignored="false" />
     <file path="/__init__.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764698907" ignored="false" />
     <file path="/transmission.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764985472" ignored="false" />
@@ -16,7 +19,7 @@
     <file path="/categorized.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764481619" ignored="false" />
     <file path="/categorize.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379769465300" ignored="false" />
     <file path="/config.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832396314" ignored="false" />
-    <file path="/README.md" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835174023" ignored="false" />
+    <file path="/README.md" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835551511" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +82,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="36" selection-start="593" selection-end="593" vertical-scroll-proportion="0.32304037">
+            <state line="40" column="65" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.807601">
               <folding />
             </state>
           </provider>
@@ -499,7 +502,11 @@
       <created>1379835186083</created>
       <updated>1379835186083</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added usage info">
+      <created>1379835596207</created>
+      <updated>1379835596207</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -524,7 +531,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -588,7 +595,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added usage info" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -617,6 +624,7 @@
     <MESSAGE value="Logging to file" />
     <MESSAGE value="Removed pycs" />
     <MESSAGE value="Updated docs" />
+    <MESSAGE value="Added usage info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -731,7 +739,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="36" selection-start="593" selection-end="593" vertical-scroll-proportion="0.32304037">
+        <state line="40" column="65" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.807601">
           <folding />
         </state>
       </provider>

@@ -19,20 +19,26 @@ provide additional awesome post-processing features!
 Usage
 ===========
 Install the script as follows:
+
 	$ python setup.py develop
 
 Edit the configuration with your folders
+
 	$ vim config.py
 
 The script can be used from the command line:
+
 	$ pyexpand /download/The.Wire.S01E01.HDTV
 
 or for transmission:
+
 	$ vim /var/lib/transmission/settings.json
 	..
 	 "script-torrent-done-enabled": true,
      "script-torrent-done-filename": "pyexpand",
     ..
 
-* Make sure that the transmission user can run `pyexpand`. If not:
+* Make sure that the transmission user can run `pyexpand`. If not
+
+
     $ ln -s /usr/local/bin/pyexpand /usr/bin/pyexpand
