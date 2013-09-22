@@ -40,6 +40,6 @@ or for transmission:
      "script-torrent-done-filename": "pyexpand",
     ..
 
-* Make sure that the transmission user can run `pyexpand`. If not
+* Make sure that the transmission user can run `pyexpand`. If not:
 
     $ ln -s /usr/local/bin/pyexpand /usr/bin/pyexpand
