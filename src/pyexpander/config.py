@@ -8,6 +8,9 @@ APP_PATH = '/apps/directory'
 MUSIC_PATH = '/music/directory'
 
 
+EXTRACTION_FILES_MASK = '770'
+
+
 LOGFILE = '/var/log/pyexp.log'
 
 

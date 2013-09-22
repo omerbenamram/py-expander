@@ -1,6 +1,7 @@
 import os
 import errno
 import shutil
+import subprocess
 
 from pyexpander import config
 from pyexpander.categorize import get_categorized_path
@@ -59,8 +60,9 @@ def _handle_directory(directory, handler, torrent_name):
                 try:
                     # Move\Copy all relevant files to their location (keep original files for uploading)
                     handler(original_path, destination_path)
-                    logger.info('%s %s to %s' % (handler.__name__, original_path, destination_path))
 
+                    logger.info('%s %s to %s' % (handler.__name__, original_path, destination_path))
+                    subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_path])
                 except OSError as e:
                     logger.exception("Failed to %s %s : %s" % (handler.__name__, original_path, e))
 
