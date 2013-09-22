@@ -4,7 +4,8 @@ from logbook import Logger
 from pyexpander import config
 
 
-filehandler = logbook.RotatingFileHandler(config.LOGFILE, level=logbook.DEBUG)
+file_handler = logbook.RotatingFileHandler(config.LOGFILE, level=logbook.DEBUG)
+console_handler = logbook.StderrHandler(level=logbook.INFO)
 
 
 def get_logger(name):
@@ -15,5 +16,6 @@ def get_logger(name):
     :return: A logbook Logger.
     """
     logger = Logger(name, level=logbook.DEBUG)
-    logger.handlers.append(filehandler)
+    logger.handlers.append(file_handler)
+    logger.handlers.append(console_handler)
     return logger
