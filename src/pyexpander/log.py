@@ -6,7 +6,10 @@ from pyexpander import config
 
 
 file_handler = logbook.RotatingFileHandler(config.LOGFILE, level=logbook.DEBUG)
-console_handler = logbook.StreamHandler(sys.stdout, level=logbook.INFO)
+console_handler = logbook.StreamHandler(sys.stdout, level=logbook.INFO, bubble=True)
+
+file_handler.push_application()
+console_handler.push_application()
 
 
 def get_logger(name):
@@ -17,6 +20,4 @@ def get_logger(name):
     :return: A logbook Logger.
     """
     logger = Logger(name, level=logbook.DEBUG)
-    logger.handlers.append(file_handler)
-    logger.handlers.append(console_handler)
     return logger
