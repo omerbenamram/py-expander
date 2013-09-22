@@ -42,4 +42,4 @@ or for transmission:
 
 * Make sure that the transmission user can run `pyexpand`. If not:
 
-    $ ln -s /usr/local/bin/pyexpand /usr/bin/pyexpand
+	$ ln -s /usr/local/bin/pyexpand /usr/bin/pyexpand
