@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/postprocess.py" afterPath="$PROJECT_DIR$/src/pyexpander/postprocess.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="py-expander.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835765977" ignored="false" />
+    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379835807039" ignored="false" />
     <file path="/setup.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832324924" ignored="false" />
     <file path="/__init__.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764698907" ignored="false" />
     <file path="/transmission.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764985472" ignored="false" />
@@ -68,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postprocess.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="postprocess.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="50" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.0">
+            <state line="48" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.54513067">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -79,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="4" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.88836104">
+            <state line="44" column="4" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,8 +163,8 @@
         <option value="$PROJECT_DIR$/src/pyexpander/torrent_handler.py" />
         <option value="$PROJECT_DIR$/src/pyexpander/config.py" />
         <option value="$PROJECT_DIR$/src/setup.py" />
-        <option value="$PROJECT_DIR$/src/pyexpander/postprocess.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/pyexpander/postprocess.py" />
       </list>
     </option>
   </component>
@@ -522,7 +522,11 @@
       <created>1379835766762</created>
       <updated>1379835766762</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fix text format">
+      <created>1379835807441</created>
+      <updated>1379835807441</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -715,13 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pyexpander/torrent_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pyexpander/extract.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="66" selection-start="752" selection-end="763" vertical-scroll-proportion="0.0">
@@ -736,15 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="50" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pyexpander/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="25" selection-start="145" selection-end="174" vertical-scroll-proportion="0.0">
@@ -756,8 +744,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="4" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.88836104">
+        <state line="44" column="4" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pyexpander/torrent_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="30" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.54513067">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

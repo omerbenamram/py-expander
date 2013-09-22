@@ -45,7 +45,7 @@ def _handle_directory(directory, handler, torrent_name):
     for directory_path, subdirectories, filenames in os.walk(directory):
         logger.info("Processing Directory %s" % directory_path)
         for filename in filenames:
-            category_path = get_categorized_path(filename)
+            category_path = get_categorized_path(os.path.join(torrent_name, filename))
 
             if category_path is not None:
 
