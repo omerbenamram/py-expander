@@ -11,7 +11,7 @@ MUSIC_PATH = '/music/directory'
 EXTRACTION_FILES_MASK = '770'
 
 
-LOGFILE = 'pyexp.log'
+LOGFILE = '/var/log/pyexp.log'
 
 
 EXTRACTION_TEMP_DIR_NAME = '_extracted'

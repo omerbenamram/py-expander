@@ -62,7 +62,7 @@ def _handle_directory(directory, handler, torrent_name):
                     handler(original_path, destination_path)
 
                     logger.info('%s %s to %s' % (handler.__name__, original_path, destination_path))
-                    subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_path])
+                    subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_dir])
                 except OSError as e:
                     logger.exception("Failed to %s %s : %s" % (handler.__name__, original_path, e))
 
@@ -73,7 +73,7 @@ def process_folder(folder):
     :param folder:
     :type folder: str
     """
-    torrent_name = os.path.basename(folder)
+    torrent_name = os.path.basename(os.path.dirname(folder))
     logger.info('Processing directory %s for torrent %s' % (folder, torrent_name))
 
     # If folder has extracted rars...

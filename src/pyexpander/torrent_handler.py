@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import logging
+import os
 import sys
 
 from pyexpander.extract import extract_all, cleanup_temp
@@ -12,6 +13,7 @@ logger = get_logger('handler')
 
 
 def expand_torrent(torrent_path):
+    torrent_path = os.path.join(torrent_path, '')
     logger.info('Processing torrent %s' % torrent_path)
 
     extract_all(torrent_path)
