@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/categorize.py" afterPath="$PROJECT_DIR$/src/pyexpander/categorize.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pyexpander/postprocess.py" afterPath="$PROJECT_DIR$/src/pyexpander/postprocess.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="py-expander.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379840785344" ignored="false" />
+    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379841040831" ignored="false" />
     <file path="/setup.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832324924" ignored="false" />
     <file path="/__init__.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764698907" ignored="false" />
     <file path="/transmission.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764985472" ignored="false" />
@@ -15,7 +15,7 @@
     <file path="/torrent_handler.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379782183892" ignored="false" />
     <file path="/log.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379782145639" ignored="false" />
     <file path="/extract.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379761960591" ignored="false" />
-    <file path="/postprocess.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832621854" ignored="false" />
+    <file path="/postprocess.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379841122386" ignored="false" />
     <file path="/categorized.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764481619" ignored="false" />
     <file path="/categorize.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379840955404" ignored="false" />
     <file path="/config.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832396314" ignored="false" />
@@ -72,7 +72,7 @@
       <file leaf-file-name="postprocess.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="2432" selection-end="2432" vertical-scroll-proportion="0.3653484">
+            <state line="76" column="27" selection-start="2689" selection-end="2689" vertical-scroll-proportion="0.5574388">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -164,8 +164,8 @@
         <option value="$PROJECT_DIR$/src/pyexpander/config.py" />
         <option value="$PROJECT_DIR$/src/setup.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/pyexpander/postprocess.py" />
         <option value="$PROJECT_DIR$/src/pyexpander/categorize.py" />
+        <option value="$PROJECT_DIR$/src/pyexpander/postprocess.py" />
       </list>
     </option>
   </component>
@@ -531,7 +531,11 @@
       <created>1379840785556</created>
       <updated>1379840785556</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Allow guessit to see the torrent name">
+      <created>1379841042537</created>
+      <updated>1379841042537</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -764,7 +768,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pyexpander/postprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="2432" selection-end="2432" vertical-scroll-proportion="0.3653484">
+        <state line="76" column="27" selection-start="2689" selection-end="2689" vertical-scroll-proportion="0.5574388">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

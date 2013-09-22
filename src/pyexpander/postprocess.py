@@ -74,6 +74,8 @@ def process_folder(folder):
     :type folder: str
     """
     torrent_name = os.path.basename(folder)
+    logger.info('Processing directory %s for torrent %s' % (folder, torrent_name))
+
     # If folder has extracted rars...
     listdir = os.listdir(folder)
     if config.EXTRACTION_TEMP_DIR_NAME in listdir:
