@@ -45,9 +45,8 @@ def get_path_non_video(filename):
 def get_categorized_path(filename):
     """
     returns destination path for extractions according to the category to which the file belongs
-    :param filename:
-    "filename.ext"
-    :rtype : tuple or None
+    :param filename: The name of the file.
+    :rtype : str
     """
     categorized_path = get_path_non_video(filename) or get_path_video(filename)
 
