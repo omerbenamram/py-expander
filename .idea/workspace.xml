@@ -7,13 +7,13 @@
     </list>
     <ignored path="py-expander.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379841145456" ignored="false" />
+    <file path="/Dummy.txt" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379841262096" ignored="false" />
     <file path="/setup.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379832324924" ignored="false" />
     <file path="/__init__.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764698907" ignored="false" />
     <file path="/transmission.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764985472" ignored="false" />
     <file path="/a.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379760272800" ignored="false" />
     <file path="/torrent_handler.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379782183892" ignored="false" />
-    <file path="/log.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379841253072" ignored="false" />
+    <file path="/log.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379841407968" ignored="false" />
     <file path="/extract.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379761960591" ignored="false" />
     <file path="/postprocess.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379841122386" ignored="false" />
     <file path="/categorized.py" changelist="ca76d41c-11b0-4d04-bf79-abfb0dfc5343" time="1379764481619" ignored="false" />
@@ -98,20 +98,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extract.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pyexpander/extract.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="66" selection-start="752" selection-end="763" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="log.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pyexpander/log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="58" selection-start="213" selection-end="213" vertical-scroll-proportion="0.12230216">
-              <folding />
+            <state line="8" column="50" selection-start="216" selection-end="216" vertical-scroll-proportion="0.24460432">
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -539,7 +532,11 @@
       <created>1379841145652</created>
       <updated>1379841145652</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added logging to screen">
+      <created>1379841262407</created>
+      <updated>1379841262407</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -628,7 +625,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="move logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logging to screen" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -661,6 +658,7 @@
     <MESSAGE value="Fix text format" />
     <MESSAGE value="Allow guessit to see the torrent name" />
     <MESSAGE value="move logging" />
+    <MESSAGE value="Added logging to screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -668,17 +666,12 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pyexpander/extract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="24" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pyexpander/log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="20" selection-start="289" selection-end="290" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -773,10 +766,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/logbook/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="518" column="29" selection-start="19102" selection-end="19108" vertical-scroll-proportion="0.3327338">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pyexpander/log.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="58" selection-start="213" selection-end="213" vertical-scroll-proportion="0.12230216">
-          <folding />
+        <state line="8" column="50" selection-start="216" selection-end="216" vertical-scroll-proportion="0.24460432">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

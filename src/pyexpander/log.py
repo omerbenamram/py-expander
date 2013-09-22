@@ -1,3 +1,4 @@
+import sys
 import logbook
 from logbook import Logger
 
@@ -5,7 +6,7 @@ from pyexpander import config
 
 
 file_handler = logbook.RotatingFileHandler(config.LOGFILE, level=logbook.DEBUG)
-console_handler = logbook.StderrHandler(level=logbook.INFO)
+console_handler = logbook.StreamHandler(sys.stdout, level=logbook.INFO)
 
 
 def get_logger(name):
