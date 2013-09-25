@@ -3,15 +3,43 @@ py-expander
 
 A python script designed to post-process Transmission torrents.
 
-Currently it supports 7-Zip only. So get it if you dont have it!
+The script extracts files recursively (if extract is necessary)
+and the moves the files to pre-configured folders based on their type.
+If no rars are present in the download - the script will copy the files.
 
-The script extracts files recursively (if extract is necessary..) 
-and the moves the files to pre-configured folders based on their type!
-if no rars are present in the download - the script will copy the files.
+The script relies on the 'guessit' package to detect movies/tv downloads.
 
-The script relies on scene torrent naming standards (such as SxxExx TV shows numbering)
+Original torrent files are conserved for upload.
 
-In any case - original torrent files are conserved for upload.
-
-I recommend using this script with couchpotato/sickbeard/headphones since they 
+I recommend using this script with couchpotato/sickbeard/headphones since they
 provide additional awesome post-processing features!
+
+* Currently only 7-Zip is supported.
+
+Usage
+===========
+Install the script as follows:
+
+	$ python setup.py develop
+
+Edit the configuration with your folders
+
+	$ vim config.py
+
+That's it.
+
+The script can be used from the command line:
+
+	$ pyexpand /download/The.Wire.S01E01.HDTV
+
+or for transmission:
+
+	$ vim /var/lib/transmission/settings.json
+	..
+	 "script-torrent-done-enabled": true,
+     "script-torrent-done-filename": "pyexpand",
+    ..
+
+* Make sure that the transmission user can run `pyexpand`. If not:
+
+	$ ln -s /usr/local/bin/pyexpand /usr/bin/pyexpand

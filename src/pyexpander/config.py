@@ -1,28 +1,20 @@
-"""
-Created on Jan 27, 2013
-
-@author: Omer
-"""
-
 import os
 import sys
 
-CATEGORY_PATH = {'tv': '/path/to/tv/directory',
-                 'movie': '/path/to/movies/directory',
-                 'app': '/path/to/apps/directory',
-                 'music': '/path/to/music/directory'}
 
-LOGFILE = '/path/to/log.log'
+TV_PATH = '/tv/directory'
+MOVIE_PATH = '/movies/directory'
+APP_PATH = '/apps/directory'
+MUSIC_PATH = '/music/directory'
+
+
+EXTRACTION_FILES_MASK = '770'
+
+
+LOGFILE = '/var/log/pyexp.log'
+
 
 EXTRACTION_TEMP_DIR_NAME = '_extracted'
-
-
-def get_environmental_variables_from_transmission():
-    TARGET_TORRENT_DIR = os.getenv('TR_TORRENT_DIR')
-    TARGET_TORRENT_NAME = os.getenv('TR_TORRENT_NAME')
-    TARGET_TORRENT_DIR = os.path.realpath(os.path.join(TARGET_TORRENT_DIR, TARGET_TORRENT_NAME))
-
-    return TARGET_TORRENT_DIR, TARGET_TORRENT_NAME
 
 
 def _find_executable(filename):
@@ -43,7 +35,7 @@ def _find_executable(filename):
         else:
             # The directory in the path does not exist
             pass
-    raise Exception(filename + 'not found or is not in system PATH')
+    raise Exception(filename + ' not found or is not in system PATH')
 
 
 EXECUTABLE = _find_executable('7z')  # Currently only 7z is supported.
