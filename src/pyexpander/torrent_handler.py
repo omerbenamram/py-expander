@@ -14,9 +14,10 @@ logger = get_logger('handler')
 
 def expand_torrent(torrent_path):
     logger.info('Processing torrent %s' % torrent_path)
+    torrent_path = os.path.abspath(torrent_path)
 
     if os.path.isdir(torrent_path):
-        torrent_path = os.path.join(os.path.abspath(torrent_path), '')
+        torrent_path = os.path.join(torrent_path, '')
         extract_all(torrent_path)
         process_folder(torrent_path)
         cleanup_temp(torrent_path)
@@ -41,6 +42,7 @@ def expand_torrent_main():
     If an argument is provided, the script will try to expand it.
     Else, we assume transmission is calling the script.
     """
+    logger.info("Py-expander started!")
     try:
         if len(sys.argv) == 2:
             torrent_path = sys.argv[1]
