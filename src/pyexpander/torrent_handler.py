@@ -1,11 +1,11 @@
-#!/usr/bin/python
-import logging
+#!/usr/bin/python2.7
 import os
 import sys
+import shutil
 
 from pyexpander.extract import extract_all, cleanup_temp
 from pyexpander.log import get_logger
-from pyexpander.postprocess import process_folder
+from pyexpander.postprocess import process_folder, process_file
 from pyexpander.transmission import get_environmental_variables_from_transmission
 
 
@@ -13,12 +13,15 @@ logger = get_logger('handler')
 
 
 def expand_torrent(torrent_path):
-    torrent_path = os.path.join(torrent_path, '')
     logger.info('Processing torrent %s' % torrent_path)
 
-    extract_all(torrent_path)
-    process_folder(torrent_path)
-    cleanup_temp(torrent_path)
+    if os.path.isdir(torrent_path):
+        torrent_path = os.path.join(os.path.abspath(torrent_path), '')
+        extract_all(torrent_path)
+        process_folder(torrent_path)
+        cleanup_temp(torrent_path)
+    else:
+        process_file(shutil.copy, os.path.basename(torrent_path), torrent_path)
 
     logger.info('Done')
 
