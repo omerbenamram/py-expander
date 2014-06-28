@@ -22,7 +22,7 @@ def expand_torrent(torrent_path):
         process_folder(torrent_path)
         cleanup_temp(torrent_path)
     else:
-        process_file(shutil.copy, os.path.basename(torrent_path), torrent_path)
+        process_file(shutil.copy, os.path.splitext(os.path.basename(torrent_path))[0], torrent_path)
 
     logger.info('Done')
 
