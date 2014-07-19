@@ -84,4 +84,4 @@ def process_folder(folder):
 
     # If folder has content only
     else:
-        _handle_directory(folder, shutil.copy, torrent_name)
+        _handle_directory(folder, shutil.move, torrent_name)
