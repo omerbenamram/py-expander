@@ -1,8 +1,8 @@
-#!/usr/local/bin/python2.7
 import os
 import sys
 import shutil
 
+from pyexpander import config
 from pyexpander.extract import extract_all, cleanup_temp
 from pyexpander.log import get_logger
 from pyexpander.postprocess import process_folder, process_file
@@ -43,12 +43,23 @@ def expand_torrent_main():
     Else, we assume transmission is calling the script.
     """
     logger.info("Py-expander started!")
-    try:
-        if len(sys.argv) == 2:
-            torrent_path = sys.argv[1]
+    try:		
+        if len(sys.argv) == 3:
+            folder = sys.argv[1]
+            filename = sys.argv[2]
+            if folder == config.DEFAULT_PATH:
+                torrent_path = os.path.join(folder, filename)
+                logger.info("Input is a file: %s" % torrent_path)
+            else:
+                torrent_path = folder
+                logger.info("Input is a dir: %s" % torrent_path)
             expand_torrent(torrent_path)
         else:
             expand_torrent_from_transmission()
     except:
         logger.exception("Critical exception occurred: ")
         raise
+
+		
+if __name__ == '__main__':
+    expand_torrent_main()

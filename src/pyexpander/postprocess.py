@@ -1,3 +1,4 @@
+import sys
 import os
 import errno
 import shutil
@@ -45,7 +46,8 @@ def process_file(handler, torrent_name, filepath):
             handler(filepath, destination_path)
 
             logger.info('%s %s to %s' % (handler.__name__, filepath, destination_path))
-            subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_dir])
+            if sys.platform != 'win32':
+				subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_dir])
         except OSError as e:
             logger.exception("Failed to %s %s : %s" % (handler.__name__, filepath, e))
 
