@@ -7,7 +7,7 @@ logger = get_logger('transmission')
 
 def get_environmental_variables_from_transmission():
     """
-    Return the environmental variables passed by tranmission to the script.
+    Return the environmental variables passed by transmission to the script.
 
     :return: (full_torrent_path, torrent_name)
     """

@@ -9,7 +9,7 @@ from pyexpander.categorize import get_categorized_path
 from pyexpander.log import get_logger
 
 
-logger = get_logger('postprocess')
+logger = get_logger('post_process')
 
 
 def _create_extraction_path(directory_path):
@@ -31,8 +31,8 @@ def _create_extraction_path(directory_path):
             pass
 
 
-def process_file(handler, torrent_name, filepath):
-    filename = os.path.basename(filepath)
+def process_file(handler, torrent_name, file_path):
+    filename = os.path.basename(file_path)
     category_path = get_categorized_path(os.path.join(torrent_name, filename))
     if category_path is not None:
         destination_dir = os.path.join(category_path, torrent_name)
@@ -43,13 +43,13 @@ def process_file(handler, torrent_name, filepath):
 
         try:
             # Move\Copy all relevant files to their location (keep original files for uploading)
-            handler(filepath, destination_path)
+            handler(file_path, destination_path)
 
-            logger.info('%s %s to %s' % (handler.__name__, filepath, destination_path))
+            logger.info('%s %s to %s' % (handler.__name__, file_path, destination_path))
             if sys.platform != 'win32':
-				subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_dir])
+                subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_dir])
         except OSError as e:
-            logger.exception("Failed to %s %s : %s" % (handler.__name__, filepath, e))
+            logger.exception("Failed to %s %s : %s" % (handler.__name__, file_path, e))
 
 
 def _handle_directory(directory, handler, torrent_name):
@@ -64,9 +64,9 @@ def _handle_directory(directory, handler, torrent_name):
     :param handler:
     :param torrent_name:
     """
-    for directory_path, subdirectories, filenames in os.walk(directory):
+    for directory_path, subdirectories, file_names in os.walk(directory):
         logger.info("Processing Directory %s" % directory_path)
-        for filename in filenames:
+        for filename in file_names:
             process_file(handler, torrent_name, os.path.join(directory_path, filename))
 
 

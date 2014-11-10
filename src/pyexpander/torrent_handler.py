@@ -39,7 +39,8 @@ def expand_torrent_from_transmission():
 def expand_torrent_main():
     """
     This main function is designed to be called from commandline.
-    If an argument is provided, the script will try to expand it.
+    If an argument (either as the full path, or as a base dir and a file) is provided,
+    the script will try to expand it.
     Else, we assume transmission is calling the script.
     """
     logger.info("Py-expander started!")
@@ -54,12 +55,13 @@ def expand_torrent_main():
                 torrent_path = folder
                 logger.info("Input is a dir: %s" % torrent_path)
             expand_torrent(torrent_path)
+        elif len(sys.argv) == 2:
+            expand_torrent(sys.argv[1])
         else:
             expand_torrent_from_transmission()
     except:
         logger.exception("Critical exception occurred: ")
         raise
 
-		
 if __name__ == '__main__':
     expand_torrent_main()

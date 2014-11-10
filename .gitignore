@@ -1,3 +1,2 @@
+*.py[cod]
 /src/pyexpander.egg-info
-/src/pyexpander/config.py
-*.pyc
