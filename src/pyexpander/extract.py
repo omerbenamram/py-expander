@@ -5,6 +5,7 @@ import subprocess
 import itertools
 from pyexpander import config
 from pyexpander.log import get_logger
+from pyexpander.utils import find_executable
 
 
 logger = get_logger('extractor')
@@ -23,7 +24,7 @@ def _extract(archive_path, destination):
     """
     # 'e': extract to current working dir
     # '-y': assume yes to all (overwrite)
-    process_info = [config.EXECUTABLE, 'e', '-y', archive_path]
+    process_info = [find_executable(config.EXTRACTION_EXECUTABLE), 'e', '-y', archive_path]
 
     logger.debug('Running %r' % process_info)
 
@@ -35,19 +36,19 @@ def _extract(archive_path, destination):
 
 def _find_target_archives(directory):
     """
-    Look for archives in sourcedir + subdirectories.
+    Look for archives in source_dir + subdirectories.
     Returns archive to extract
     :param directory:
     :type directory: str
     :rtype: list
     """
     archives_list = []
-    for dirpath, dirnames, filenames in os.walk(directory):
-        for f in filenames:
+    for dir_path, _, file_names in os.walk(directory):
+        for f in file_names:
             candidate_extension = os.path.splitext(f)[1]
             if candidate_extension in ARCHIVE_EXTENSIONS:
-                logger.debug('Found archive %s in %s' % (os.path.join(dirpath, f), directory))
-                archives_list.append(os.path.join(dirpath, f))
+                logger.debug('Found archive %s in %s' % (os.path.join(dir_path, f), directory))
+                archives_list.append(os.path.join(dir_path, f))
 
     #Deals with redundant part01.rar part02.rar etc..
     def _redundant_parts_filter(file_name):
@@ -74,7 +75,7 @@ def extract_all(folder):
     recursively extracts all archives in folder.
     recursive extraction is iterative and is saved under
 
-    /foler/config.EXTRACTION_TEMP_DIR_NAME/unpacked_%iteration number
+    /folder/config.EXTRACTION_TEMP_DIR_NAME/unpacked_%iteration number
 
     :param folder:
     """

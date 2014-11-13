@@ -32,13 +32,21 @@ The script can be used from the command line:
 
 	$ pyexpand /download/The.Wire.S01E01.HDTV
 
-or for transmission:
+For transmission:
 
 	$ vim /var/lib/transmission/settings.json
 	..
 	 "script-torrent-done-enabled": true,
      "script-torrent-done-filename": "pyexpand",
     ..
+
+Or for uTorrent:
+
+    Options -> Advanced -> Run Program
+    When download is finished, run (Change paths accordingly): 
+	'C:\Python27\pythonw.exe D:\Projects\py-expander\src\pyexpander\torrent_handler.py "%D" "%F"'
+	
+	Important: Be sure to use different folders for new downloads and completed downloads, or else pyexpander won't work.
 
 * Make sure that the transmission user can run `pyexpand`. If not:
 
