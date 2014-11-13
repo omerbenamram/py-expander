@@ -30,6 +30,26 @@ def _create_extraction_path(directory_path):
             pass
 
 
+def process_file(handler, torrent_name, filepath):
+    filename = os.path.basename(filepath)
+    category_path = get_categorized_path(os.path.join(torrent_name, filename))
+    if category_path is not None:
+        destination_dir = os.path.join(category_path, torrent_name)
+
+        # Creates target directory (of category path)
+        _create_extraction_path(destination_dir)
+        destination_path = os.path.join(destination_dir, filename)
+
+        try:
+            # Move\Copy all relevant files to their location (keep original files for uploading)
+            handler(filepath, destination_path)
+
+            logger.info('%s %s to %s' % (handler.__name__, filepath, destination_path))
+            subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_dir])
+        except OSError as e:
+            logger.exception("Failed to %s %s : %s" % (handler.__name__, filepath, e))
+
+
 def _handle_directory(directory, handler, torrent_name):
     """
     This is the main directory processing function.
@@ -45,26 +65,7 @@ def _handle_directory(directory, handler, torrent_name):
     for directory_path, subdirectories, filenames in os.walk(directory):
         logger.info("Processing Directory %s" % directory_path)
         for filename in filenames:
-            category_path = get_categorized_path(os.path.join(torrent_name, filename))
-
-            if category_path is not None:
-
-                original_path = os.path.join(directory_path, filename)
-
-                destination_dir = os.path.join(category_path, torrent_name)
-
-                # Creates target directory (of category path)
-                _create_extraction_path(destination_dir)
-                destination_path = os.path.join(destination_dir, filename)
-
-                try:
-                    # Move\Copy all relevant files to their location (keep original files for uploading)
-                    handler(original_path, destination_path)
-
-                    logger.info('%s %s to %s' % (handler.__name__, original_path, destination_path))
-                    subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_dir])
-                except OSError as e:
-                    logger.exception("Failed to %s %s : %s" % (handler.__name__, original_path, e))
+            process_file(handler, torrent_name, os.path.join(directory_path, filename))
 
 
 def process_folder(folder):

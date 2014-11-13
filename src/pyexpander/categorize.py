@@ -13,7 +13,7 @@ SOFTWARE_EXTENSIONS = ['.iso', '.exe']
 
 
 def get_path_video(filename):
-    guess = guessit.guess_video_info(filename)
+    guess = guessit.guess_file_info(filename)
 
     if guess[u'type'] == u'episode':
         series = guess.get(u'series', u'').title()

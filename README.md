@@ -14,7 +14,7 @@ Original torrent files are conserved for upload.
 I recommend using this script with couchpotato/sickbeard/headphones since they
 provide additional awesome post-processing features!
 
-* Currently only 7-Zip is supported.
+* Currently only 7-Zip is supported. (Make sure to use the version with the rar plugin, or compile from source with 'make all')
 
 Usage
 ===========
