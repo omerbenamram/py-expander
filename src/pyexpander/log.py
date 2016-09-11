@@ -2,7 +2,7 @@ import sys
 import logbook
 from logbook import Logger
 
-from pyexpander import config
+from . import config
 
 
 file_handler = logbook.RotatingFileHandler(config.LOGFILE, level=logbook.DEBUG)

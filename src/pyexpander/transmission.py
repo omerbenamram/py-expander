@@ -1,5 +1,5 @@
 import os
-from pyexpander.log import get_logger
+from .log import get_logger
 
 
 logger = get_logger('transmission')
@@ -19,7 +19,6 @@ def get_environmental_variables_from_transmission():
 
     full_path = os.path.join(torrent_dir, torrent_name)
 
-    logger.info('Called from transmission with torrent %s' % full_path)
+    logger.info('Called from transmission with torrent {}'.format(full_path))
 
     return full_path
-

@@ -44,7 +44,7 @@ Or for uTorrent:
 
     Options -> Advanced -> Run Program
     When download is finished, run (Change paths accordingly): 
-	'C:\Python27\pythonw.exe D:\Projects\py-expander\src\pyexpander\torrent_handler.py "%D" "%F"'
+	'C:\Python35\pythonw.exe D:\Projects\py-expander\src\pyexpander\torrent_handler.py "%D" "%F"'
 	
 	Important: Be sure to use different folders for new downloads and completed downloads, or else pyexpander won't work.
 

@@ -1,8 +1,8 @@
 import os
-import guessit
+from guessit import guessit
 
-from pyexpander import config
-from pyexpander.log import get_logger
+from . import config
+from .log import get_logger
 
 
 logger = get_logger('categorize')
@@ -13,16 +13,16 @@ SOFTWARE_EXTENSIONS = ['.iso', '.exe']
 
 
 def get_path_video(filename):
-    guess = guessit.guess_file_info(filename)
+    guess = guessit(filename)
 
-    if guess[u'type'] == u'episode':
-        series = guess.get(u'series', u'').title()
-        season = guess.get(u'season', u'')
+    if guess['type'] == 'episode':
+        series = guess.get('series', '').title()
+        season = guess.get('season', '')
 
         return config.TV_PATH.format(series=series, season=season)
-    elif guess[u'type'] == u'movie':
-        title = guess.get(u'title', u'').title()
-        year = guess.get(u'year', u'')
+    elif guess['type'] == 'movie':
+        title = guess.get('title', '').title()
+        year = guess.get('year', '')
 
         return config.MOVIE_PATH.format(title=title, year=year)
     else:
@@ -51,9 +51,9 @@ def get_categorized_path(filename):
     categorized_path = get_path_non_video(filename) or get_path_video(filename)
 
     if categorized_path is not None:
-        logger.debug("Categorized path for %s is %s" % (filename, categorized_path))
+        logger.debug("Categorized path for {} is {}".format(filename, categorized_path))
     else:
         # file is not recognized by any of the categories/checks.
-        logger.debug("%s is not in any relevant category, ignoring" % filename)
+        logger.debug("{} is not in any relevant category, ignoring".format(filename))
 
     return categorized_path

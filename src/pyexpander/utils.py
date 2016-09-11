@@ -4,7 +4,8 @@ import os
 
 def find_executable(filename):
     """
-    Searches for a file in paths exported to the PATH environmental variable
+    Searches for a file in paths exported to the PATH environmental variable.
+
     :param filename: The file to search for.
     """
     # Search the system path for the executable
@@ -21,4 +22,3 @@ def find_executable(filename):
             # The directory in the path does not exist
             pass
     raise Exception(filename + ' not found or is not in system PATH')
-

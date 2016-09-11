@@ -1,4 +1,4 @@
-#!/usr/local/bin/python2.7
+#!/usr/local/bin/python3.5
 import os
 import sys
 import shutil
@@ -14,7 +14,7 @@ logger = get_logger('handler')
 
 
 def expand_torrent(torrent_path):
-    logger.info('Processing torrent %s' % torrent_path)
+    logger.info('Processing torrent {}'.format(torrent_path))
     torrent_path = os.path.abspath(torrent_path)
 
     if os.path.isdir(torrent_path):
@@ -51,17 +51,17 @@ def expand_torrent_main():
             filename = sys.argv[2]
             if folder == config.DEFAULT_PATH:
                 torrent_path = os.path.join(folder, filename)
-                logger.info("Input is a file: %s" % torrent_path)
+                logger.info("Input is a file: {}".format(torrent_path))
             else:
                 torrent_path = folder
-                logger.info("Input is a dir: %s" % torrent_path)
+                logger.info("Input is a dir: {}".format(torrent_path))
             expand_torrent(torrent_path)
         elif len(sys.argv) == 2:
             expand_torrent(sys.argv[1])
         else:
             expand_torrent_from_transmission()
     except:
-        logger.exception("Critical exception occurred: ")
+        logger.exception("Critical exception occurred:")
         raise
 
 if __name__ == '__main__':
