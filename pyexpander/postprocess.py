@@ -7,11 +7,12 @@ import logbook
 
 from . import config
 from .categorize import get_categorized_path
+from .subtitles import find_file_subtitles
 
 logger = logbook.Logger('post_process')
 
 
-def _create_extraction_path(directory_path):
+def _create_destination_path(directory_path):
     """
     Verifies that current path exists and if it doesn't, creates the path.
 
@@ -40,7 +41,7 @@ def process_file(handler, torrent_name, file_path):
     if category_path is not None:
         destination_dir = os.path.join(category_path, torrent_name)
         # Creates target directory (of category path).
-        _create_extraction_path(destination_dir)
+        _create_destination_path(destination_dir)
         destination_path = os.path.join(destination_dir, filename)
         try:
             # Move\Copy all relevant files to their location (keep original files for uploading).
@@ -48,6 +49,9 @@ def process_file(handler, torrent_name, file_path):
             logger.info('{} {} to {}'.format(handler.__name__, file_path, destination_path))
             if os.name != 'nt':
                 subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_dir])
+            # Get subtitles.
+            if config.SHOULD_FIND_SUBTITLES:
+                find_file_subtitles(destination_path)
         except OSError as e:
             logger.exception('Failed to {} {}: {}'.format(handler.__name__, file_path, e))
 

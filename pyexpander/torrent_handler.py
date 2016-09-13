@@ -8,6 +8,7 @@ import logbook
 from pyexpander import config
 from pyexpander.extract import extract_all, cleanup_temp
 from pyexpander.postprocess import process_directory, process_file
+from pyexpander.subtitles import configure_subtitles_cache
 from pyexpander.transmission import get_environment_variables_from_transmission
 
 logger = logbook.Logger('handler')
@@ -64,6 +65,11 @@ def main():
     with logbook.NestedSetup(_get_log_handlers()).applicationbound():
         logger.info('Py-expander started!')
         try:
+            # Set subliminal cache first.
+            if config.SHOULD_FIND_SUBTITLES:
+                logger.debug('Setting subtitles cache...')
+                configure_subtitles_cache()
+            # Parse input arguments.
             if len(sys.argv) == 3:
                 directory = sys.argv[1]
                 filename = sys.argv[2]
