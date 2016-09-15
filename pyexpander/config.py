@@ -22,3 +22,17 @@ LANGUAGES_MAP = {
     babelfish.Language('heb'): ['subscenter'],
     babelfish.Language('eng'): []
 }
+
+# Upload settings.
+SHOULD_UPLOAD = True
+ACD_CLI_PATH = '/usr/bin/acd_cli'
+DEFAULT_VIDEO_EXTENSION = '.mkv'
+SUBTITLES_EXTENSIONS = ['.srt']
+LANGUAGE_EXTENSIONS = ['.he', '.en']
+# Lists.
+EXTENSIONS_WHITE_LIST = ['.srt', '.mkv', '.avi', '.mp4', '.mov', '.m4v', '.wmv']
+NAMES_BLACK_LIST = ['sample']
+# Directories settings.
+AMAZON_TV_PATH = '/Media/TV'
+AMAZON_MOVIE_PATH = '/Media/Movies'
+ORIGINAL_NAMES_LOG = '/mnt/vdb/data/original_names.log'

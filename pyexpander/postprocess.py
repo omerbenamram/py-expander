@@ -5,6 +5,7 @@ import subprocess
 
 import logbook
 
+from pyexpander.upload import upload_file
 from . import config
 from .categorize import get_categorized_path
 from .subtitles import find_file_subtitles
@@ -50,10 +51,17 @@ def process_file(handler, torrent_name, file_path):
             if os.name != 'nt':
                 subprocess.check_output(['chmod', config.EXTRACTION_FILES_MASK, '-R', destination_dir])
             # Get subtitles.
+            subtitles_paths = None
             if config.SHOULD_FIND_SUBTITLES:
-                find_file_subtitles(destination_path)
-        except OSError as e:
-            logger.exception('Failed to {} {}: {}'.format(handler.__name__, file_path, e))
+                subtitles_paths = find_file_subtitles(destination_path)
+            # Upload files to Amazon.
+            if config.SHOULD_UPLOAD:
+                upload_file(destination_path)
+                if subtitles_paths:
+                    for subtitles_path in subtitles_paths:
+                        upload_file(subtitles_path)
+        except OSError as ex:
+            logger.exception('Failed to {} {}: {}'.format(handler.__name__, file_path, ex))
 
 
 def _handle_directory(directory, handler, torrent_name):

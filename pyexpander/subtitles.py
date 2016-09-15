@@ -17,6 +17,7 @@ def find_file_subtitles(path):
     Finds subtitles for the given video file path.
 
     :param path: The path of the video file to find subtitles to.
+    :return: The list of subtitles file paths, or None if a problem occurred.
     """
     logger.info('Searching subtitles for file: {}'.format(path))
     try:
@@ -54,6 +55,7 @@ def find_file_subtitles(path):
                 logger.info('Saving {} to: {}'.format(subtitles, subtitles_path))
                 open(subtitles_path, 'wb').write(subtitles.content)
                 results_list.append(subtitles_path)
+            return results_list
     except ValueError:
         # Subliminal raises a ValueError if the given file is not a video file.
         logger.info('Not a video file. Moving on...')
