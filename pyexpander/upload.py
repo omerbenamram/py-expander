@@ -88,7 +88,7 @@ def upload_file(file_path):
             current_dir += '/{}'.format(directory)
             subprocess.run('{} mkdir "{}"'.format(config.ACD_CLI_PATH, current_dir), shell=True)
         # Upload!
-        process = subprocess.run('{} upload "{}" "{}"'.format(config.ACD_CLI_PATH, new_path, cloud_dir), shell=True)
+        process = subprocess.run('{} upload -o "{}" "{}"'.format(config.ACD_CLI_PATH, new_path, cloud_dir), shell=True)
         # Check results.
         if process.returncode != 0:
             logger.error('Bad return code ({}) for file: {}'.format(process.returncode, file_path))
