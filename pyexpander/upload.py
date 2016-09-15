@@ -63,12 +63,12 @@ def upload_file(file_path):
         if season:
             episode = guess_results.get('episode')
             if episode:
-                cloud_dir = '{}/{}/Season {:02d}'.format(config.TV_PATH, title, season)
+                cloud_dir = '{}/{}/Season {:02d}'.format(config.AMAZON_TV_PATH, title, season)
                 cloud_file = '{} - S{:02d}E{:02d}'.format(title, season, episode)
     elif video_type == 'movie' and title:
         year = guess_results.get('year')
         if year:
-            cloud_dir = '{}/{} ({})'.format(config.MOVIE_PATH, title, year)
+            cloud_dir = '{}/{} ({})'.format(config.AMAZON_MOVIE_PATH, title, year)
             cloud_file = '{} ({})'.format(title, year)
     if cloud_dir and cloud_file:
         if language_extension:
