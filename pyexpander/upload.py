@@ -92,16 +92,16 @@ def upload_file(file_path):
             subprocess.run('{} mkdir "{}"'.format(config.ACD_CLI_PATH, current_dir), shell=True)
         # Upload!
         logger.info('Uploading file...')
-        process = subprocess.run('{} upload -o "{}" "{}"'.format(config.ACD_CLI_PATH, new_path, cloud_dir), shell=True)
+        process = subprocess.run('{} upload -o --remove-source-files "{}" "{}"'.format(
+            config.ACD_CLI_PATH, new_path, cloud_dir), shell=True)
         # Check results.
         if process.returncode != 0:
             logger.error('Bad return code ({}) for file: {}'.format(process.returncode, file_path))
         else:
             logger.info('Upload succeeded! Deleting original file...')
-            # If everything went smoothly, delete the original file and add its name to the original names log.
+            # If everything went smoothly, add the file name to the original names log.
             if not is_subtitles:
                 open(config.ORIGINAL_NAMES_LOG, 'a', encoding='UTF-8').write(file_path + '\n')
-            os.remove(new_path)
             # Sync again when done.
             _sync()
     else:
