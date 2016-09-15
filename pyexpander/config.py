@@ -33,6 +33,6 @@ LANGUAGE_EXTENSIONS = ['.he', '.en']
 EXTENSIONS_WHITE_LIST = ['.srt', '.mkv', '.avi', '.mp4', '.mov', '.m4v', '.wmv']
 NAMES_BLACK_LIST = ['sample']
 # Directories settings.
-AMAZON_TV_PATH = '/Media/TV'
-AMAZON_MOVIE_PATH = '/Media/Movies'
-ORIGINAL_NAMES_LOG = '/mnt/vdb/data/original_names.log'
+AMAZON_TV_PATH = '/amazon/tv/path'
+AMAZON_MOVIE_PATH = '/amazon/movies/path'
+ORIGINAL_NAMES_LOG = '/var/log/original_names.log'
