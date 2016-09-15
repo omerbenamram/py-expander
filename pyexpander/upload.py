@@ -58,6 +58,9 @@ def upload_file(file_path):
     guess_results = guessit(os.path.basename(fixed_file_path))
     video_type = guess_results.get('type')
     title = guess_results.get('title')
+    # Make sure every word starts with a capital letter.
+    if title:
+        title = title.title()
     if video_type == 'episode' and title:
         season = guess_results.get('season')
         if season:
