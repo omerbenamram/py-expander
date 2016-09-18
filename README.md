@@ -4,17 +4,19 @@ py-expander
 A python script designed to post-process Transmission torrents.
 
 The script extracts files recursively (if extract is necessary)
-and the moves the files to pre-configured folders based on their type.
-If no rars are present in the download - the script will copy the files.
+and the moves the files to pre-configured directories based on their type.
+If no RARs are present in the download - the script will copy the files.
 
 The script relies on the 'guessit' package to detect movies/tv downloads.
 
 Original torrent files are conserved for upload.
 
-I recommend using this script with couchpotato/sickbeard/headphones since they
-provide additional awesome post-processing features!
+The script can also fetch subtitles in chosen languages (change in the config file),  
+and upload the videos to an Amazon cloud storage account.
 
-* Currently only 7-Zip is supported. (Make sure to use the version with the rar plugin, or compile from source with 'make all')
+All original torrent names are kept the original names log file.
+
+Currently only 7-Zip is supported. (Make sure to use the version with the rar plugin, or compile from source with 'make all')
 
 Usage
 ===========
@@ -22,7 +24,7 @@ Install the script as follows:
 
 	$ python setup.py develop
 
-Edit the configuration with your folders
+Edit the configuration with your directories
 
 	$ vim config.py
 
@@ -44,9 +46,9 @@ Or for uTorrent:
 
     Options -> Advanced -> Run Program
     When download is finished, run (Change paths accordingly): 
-	'C:\Python27\pythonw.exe D:\Projects\py-expander\src\pyexpander\torrent_handler.py "%D" "%F"'
+	'C:\Python35\pythonw.exe D:\Projects\py-expander\src\pyexpander\torrent_handler.py "%D" "%F"'
 	
-	Important: Be sure to use different folders for new downloads and completed downloads, or else pyexpander won't work.
+	Important: Be sure to use different directories for new downloads and completed downloads, or else pyexpander won't work.
 
 * Make sure that the transmission user can run `pyexpand`. If not:
 
